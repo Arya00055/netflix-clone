@@ -1,0 +1,106 @@
+body {
+	 background: url("https://images3.alphacoders.com/131/1317555.jpeg") center / cover no-repeat;
+	 height: 100vh;
+	 margin: 0;
+  justify-content:center;
+}
+.head{
+  text-align:center;
+}
+ .nav-links {
+	 border-radius: 25px;
+	 height: fit-content;
+	 display: inline-flex;
+	 background-color: rgba(0, 0, 0, .2);
+	 -webkit-backdrop-filter: blur(10px);
+	 backdrop-filter: blur(10px);
+	 align-items: center;
+	 padding: 0 10px;
+	 margin: 50px 0 0 0;
+}
+ .nav-links li {
+	 list-style: none;
+	 color: white;
+	 font-family: sans-serif;
+	 font-weight: bold;
+	 padding: 12px 16px;
+	 margin: 0 8px;
+	 position: relative;
+	 cursor: pointer;
+	 white-space: nowrap;
+}
+ .nav-links li::before {
+	 content: " ";
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 height: 100%;
+	 width: 100%;
+	 z-index: -1;
+	 transition: 0.2s;
+	 border-radius: 25px;
+}
+ .nav-links li:hover {
+	 color: black;
+}
+ .nav-links li:hover::before {
+	 background: linear-gradient(to bottom, #e8edec, #d2d1d3);
+	 box-shadow: 0px 3px 20px 0px black;
+	 transform: scale(1.2);
+}
+/* background blur*/
+.sec1{
+    margin-top:20px;
+    padding-top:10px;
+    background-color:rgba(0,0,0,0.05);
+    -webkit-backdrop-filter:blur(5px);
+    backdrop-filter:blur(5px);
+}
+
+/* card box list */
+
+.cards-list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 10px 50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.card .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+
+.card .card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.card .card_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-family: "Unbounded", sans-serif;
+  font-size: 30px;
+  margin-top: -80px;
+  height: 40px;
+}
+
+.card:hover {
+  transform: scale(0.9, 0.9);
+}
+
+.title-white {
+  color: white;
+}
