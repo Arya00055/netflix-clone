@@ -4,7 +4,200 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie List</title>
-    <link rel="stylesheet" href="./style/styles.css">
+<style>
+    body {
+	 background: url("https://wallpapers.com/images/featured/movie-9pvmdtvz4cb0xl37.jpg") center / cover no-repeat;
+	 background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+  height: 100vh;
+	 margin: 0;
+  justify-content:center;
+}
+body:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
+  opacity: .5;
+}
+.head{
+  text-align:center;
+}
+ .nav-links {
+	 border-radius: 25px;
+	 height: fit-content;
+	 display: inline-flex;
+	 background-color: rgba(0, 0, 0, .2);
+	 -webkit-backdrop-filter: blur(10px);
+	 backdrop-filter: blur(10px);
+	 align-items: center;
+   padding: 0 10px;
+   margin: 50px 0 0 0;
+}
+ .nav-links li {
+	 list-style: none;
+	 color: white;
+	 font-family: sans-serif;
+	 font-weight: bold;
+	 padding: 12px 16px;
+	 margin: 0 8px;
+	 position: relative;
+	 cursor: pointer;
+	 white-space: nowrap;
+}
+ .nav-links li::before {
+	 content: " ";
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 height: 100%;
+	 width: 100%;
+	 z-index: -1;
+	 transition: 0.2s;
+	 border-radius: 25px;
+}
+ .nav-links li:hover {
+	 color: black;
+}
+ .nav-links li:hover::before {
+	 background: linear-gradient(to bottom, #e8edec, #d2d1d3);
+	 box-shadow: 0px 3px 20px 0px black;
+	 transform: scale(1.2);
+}
+/* background blur*/
+.sec1{
+    margin-top:20px;
+    padding-top:10px;
+    background-color:rgba(0,0,0,0.05);
+    -webkit-backdrop-filter:blur(2px);
+    backdrop-filter:blur(2px);
+    border-radius:50px;
+    margin:20px 20px;
+  margin-top:8px;
+    
+}
+.sec2{
+  margin-top:20px;
+    padding-top:10px;
+    background-color:rgba(0,0,0,0.05);
+    -webkit-backdrop-filter:blur(2px);
+    backdrop-filter:blur(2px);
+    border-radius:50px;
+    margin:20px 20px;
+  margin-top:8px;
+}
+/*h2 */
+h2{
+  text-align:center;
+  color:#ffffff;
+  background-color:rgba(0,0,0,0.05);
+  -webkit-backdrop-filter:blur(10px);
+  border-radius:50px;
+  width:35%;
+  margin-left:33%;
+  margin-top:8px;
+}
+/* card box list */
+
+.cards-list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cards-lists{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  margin: 0px 10px;
+  margin-bottom:20px;
+  width: 300px;
+  height: 200px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 2px;
+}
+
+.card .card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.card .card_title {
+  text-align: center;
+  border-radius: 0px 0px 20px 20px;
+  font-family: "Unbounded", sans-serif;
+  font-size: 20px;
+  margin-top: -50px;
+  height: 30px;
+}
+.card a{
+  transition: transform .2s; 
+}
+
+.card:hover {
+  transition: transform .2s;
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);  
+  transform: scale(1.1);
+}
+
+.title-white {
+  color: white;
+}
+.sec3{
+  margin-top:10px;
+    padding-top:10px;
+    background-color:rgba(0,0,0,0.7);
+    -webkit-backdrop-filter:blur(2px);
+    backdrop-filter:blur(2px);
+    border-radius:30px;
+   margin-bottom:50px;
+  margin:20px 20px;
+  padding-bottom:30px;
+}
+.last ul {
+  margin-left:20px;
+  margin-bottom:-10px;
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  color:#ffffff;
+}
+.last a{
+  color: var(-dark);
+  text-decoration:none;
+  color:#ffffff;
+}
+.last a:hover{
+  color:var(-dark);
+  text-decoration:underline;
+}
+p{
+  margin-top:20px;
+  padding-top:10px;
+  text-align:center;
+  color:#ffffff;
+}
+</style>
 </head>
   <body>
     <header class="head">
